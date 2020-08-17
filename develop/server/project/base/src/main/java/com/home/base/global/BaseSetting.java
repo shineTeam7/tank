@@ -28,7 +28,7 @@ public class BaseSetting
 		CommonSetting.pathFindingType=PathFindingType.JPS;
 		//CommonSetting.pathFindingType=PathFindingType.Recast;
 		
-		CommonSetting.needExternLib=true;
+		//CommonSetting.needExternLib=true;
 		CommonSetting.monsterNeedCrowedGrid=true;
 		
 		CommonSetting.serverMapNeedSecondGrid=false;
