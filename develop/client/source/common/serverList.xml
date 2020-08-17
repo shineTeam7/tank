@@ -1,0 +1,6 @@
+<list>
+	<server name="本地" value="http://127.0.0.1:20014"/>
+	<server name="公司个人服" value="http://10.227.10.176:20014"/>
+	<server name="home服" value="http://feiying871124.vicp.cc:20014"/>
+	<server name="公司mac地址" value="http://10.95.139.146:20014"/>
+</list>

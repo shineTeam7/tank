@@ -1,0 +1,458 @@
+﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C24B390-C784-4544-AE68-B34B8E34E612}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>hotfix</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>hotfix</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\game\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>$(ManagedDir)/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>$(ClientDir)/game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>$(ClientDir)/game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.BaselibModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CloudWebServicesModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.CloudWebServicesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FacebookModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTrackingModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TimelineModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>$(ManagedDir)/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Locator">
+      <HintPath>$(ManagedDir)/Unity.Locator.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(UnityExtensionsDir)/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>$(UnityExtensionsDir)/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>$(UnityExtensionsDir)/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>$(UnityExtensionsDir)/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>$(UnityExtensionsDir)/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>$(UnityExtensionsDir)/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>$(UnityExtensionsDir)/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="C5">
+      <HintPath>$(ClientDir)/game/Assets/src/shine/lib/C5.dll</HintPath>
+    </Reference>
+    <Reference Include="zlib.net">
+      <HintPath>$(ClientDir)/game/Assets/src/shine/lib/zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src/hotfix/app/HGameApp.cs" />
+    <Compile Include="src/hotfix/config/base/HConfig.cs" />
+    <Compile Include="src/hotfix/config/base/HConfigReadData.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HCenterRequestType.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HCenterResponseType.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HGameRequestType.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HGameResponseType.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HPlayerListDataType.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HPlayerPartDataType.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HTextEnum.cs" />
+    <Compile Include="src/hotfix/constlist/generate/HotfixDataType.cs" />
+    <Compile Include="src/hotfix/constlist/ui/HUIInstanceType.cs" />
+    <Compile Include="src/hotfix/control/HCodeCheckRecord.cs" />
+    <Compile Include="src/hotfix/control/HConfigControl.cs" />
+    <Compile Include="src/hotfix/control/HGameFactoryControl.cs" />
+    <Compile Include="src/hotfix/control/HGameMainControl.cs" />
+    <Compile Include="src/hotfix/control/HGameUI.cs" />
+    <Compile Include="src/hotfix/control/HGameUIControl.cs" />
+    <Compile Include="src/hotfix/global/HGameC.cs" />
+    <Compile Include="src/hotfix/global/HGlobal.cs" />
+    <Compile Include="src/hotfix/global/HGlobalReadData.cs" />
+    <Compile Include="src/hotfix/player/HPlayer.cs" />
+    <Compile Include="src/hotfix/player/list/HPlayerListData.cs" />
+    <Compile Include="src/hotfix/server/HGameServer.cs" />
+    <Compile Include="src/hotfix/tool/HGameDataRegister.cs" />
+    <Compile Include="src/hotfix/tool/generate/HCenterResponseMaker.cs" />
+    <Compile Include="src/hotfix/tool/generate/HGameResponseMaker.cs" />
+    <Compile Include="src/hotfix/tool/generate/HPlayerListDataMaker.cs" />
+    <Compile Include="src/hotfix/tool/generate/HPlayerPartDataMaker.cs" />
+    <Compile Include="src/hotfix/tool/generate/HotfixDataMaker.cs" />
+    <Compile Include="src/hotfix/view/ui/bag/HBagUI.cs" />
+    <Compile Include="src/hotfix/view/ui/base/HGameUILogicBase.cs" />
+    <Compile Include="src/hotfix/view/ui/character/HBloodTabLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/character/HCharacterUI.cs" />
+    <Compile Include="src/hotfix/view/ui/character/HMessageTabLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/character/HSkillUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HDamageNumUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HFightChatLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HFightChatTextUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HFightDirControlLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HFightMiniMapLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HFightOverUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HFightSkillControlLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HFightUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HKillCombosTipUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HKillMessageTipUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HKillTitleTipUI.cs" />
+    <Compile Include="src/hotfix/view/ui/fight/HUnitHeadUI.cs" />
+    <Compile Include="src/hotfix/view/ui/magicBox/HMagicBoxOpenUI.cs" />
+    <Compile Include="src/hotfix/view/ui/magicBox/HMagicBoxUI.cs" />
+    <Compile Include="src/hotfix/view/ui/mail/HMailUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HGuideUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HLogoUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HMainCharacterListLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HMainPlayerInfoLogic.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HMainUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HMatchUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HMeleeMatchUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HModeChoiceUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HOneVsOneUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HPetUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HRankUI.cs" />
+    <Compile Include="src/hotfix/view/ui/main/HSignInUI.cs" />
+    <Compile Include="src/hotfix/view/ui/option/HContactUsUI.cs" />
+    <Compile Include="src/hotfix/view/ui/option/HExitUI.cs" />
+    <Compile Include="src/hotfix/view/ui/option/HOptionUI.cs" />
+    <Compile Include="src/hotfix/view/ui/playerInfo/HChangeNameUI.cs" />
+    <Compile Include="src/hotfix/view/ui/playerInfo/HHeadIconUI.cs" />
+    <Compile Include="src/hotfix/view/ui/playerInfo/HPlayerInfoUI.cs" />
+    <Compile Include="src/hotfix/view/ui/playerInfo/HSegmentUI.cs" />
+    <Compile Include="src/hotfix/view/ui/shop/HDonateDetailUI.cs" />
+    <Compile Include="src/hotfix/view/ui/shop/HDonateUI.cs" />
+    <Compile Include="src/hotfix/view/ui/shop/HShopUI.cs" />
+    <Compile Include="src/hotfix/view/ui/system/HAlertUI.cs" />
+    <Compile Include="src/hotfix/view/ui/system/HTipUI.cs" />
+    <Compile Include="src/hotfix/view/ui/task/HTaskUI.cs" />
+    <Compile Include="src/hotfix/view/ui/topBar/HTopBarUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIContainer_Element_skillGrid_selectDown.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIContainer_Element_skillGrid_selectUp.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_characterGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_donateCardForRole.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_donateCardForWeapon.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_donateItem.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_fightAttrGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_fightRankGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_headIcon.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_itemBag.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_magicBoxItem.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_magicBoxRewardItem.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_mailGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_petGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_rankGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_roleGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_shopItem.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_signInItem.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_skillButton.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_skillGrid.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/elements/UIElement_taskItem.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_bagUI_objSelect.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_bagUI_tabs.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_bagUI_tabs_tabAll.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_bagUI_tabs_tabCost.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_bagUI_tabs_tabDebris.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_characterUI_tabs.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_contactUsUI_options.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_debugUI_helpTip.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_dirControl.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_dirControl_postionMax.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_dirControl_postionMin.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_miniMap.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_miniMap_points.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_rankView.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_rankView_objRankFirst.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_skillControl.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_fightUI_timeObj.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_killCombosTipUI_objCombos.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_killMessageTipUI_objMessageTip.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_killTitleTipUI_objBigTip.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_killTitleTipUI_objBigTip_objLeftHead.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_killTitleTipUI_objBigTip_objRightHead.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_mailUI_objMailDetail.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_mainUI_objCharacters.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_mainUI_player.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_modeChoiceUI_fourVsContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_modeChoiceUI_gambleContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_modeChoiceUI_twoVsContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_modeChoiceUI_unlimiteContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_oneVsOneUI_leftObj.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_oneVsOneUI_objRule.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_oneVsOneUI_rightObj.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_optionUI_languageGroup.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_optionUI_operateGroup.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_petUI_objStars.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_playerInfoUI_frontGroup.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_playerInfoUI_leftGroup.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_playerInfoUI_rightGroup.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_segmentUI_lblSegmentGroup.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_shopUI_tabs.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_skillUI_attributesContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_skillUI_bloodContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_skillUI_roleContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_skillUI_roleContent_buyRoleObj.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_skillUI_roleDetailContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_skillUI_talentContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_taskUI_objContent.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_taskUI_objContent_objDay.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_taskUI_objContent_objLevel.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_taskUI_objContent_objTask.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_taskUI_objContent_objTask_objTab.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_taskUI_objTab.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_topBarUI_objDiamond.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_topBarUI_objSp.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_unitHeadUI_rootObject.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIContainer_Model_unitHeadUI_rootObject_heibangzidan.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_alertUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_bagUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_changeNameUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_characterUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_contactUsUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_damageNumUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_debugUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_donateDetailUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_donateUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_exitUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_fightChatTextUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_fightOverUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_fightUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_guideUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_headIconUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_killCombosTipUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_killMessageTipUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_killTitleTipUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_logoUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_magicBoxOpenUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_magicBoxUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_mailUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_mainUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_matchUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_meleeMatchUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_modeChoiceUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_oneVsOneUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_optionUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_petUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_playerInfoUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_rankUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_segmentUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_shopUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_signInUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_skillUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_taskUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_tipUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_topBarUI.cs" />
+    <Compile Include="src/hotfix/view/uiGenerate/models/UIModel_unitHeadUI.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

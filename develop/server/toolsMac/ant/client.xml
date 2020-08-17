@@ -1,0 +1,30 @@
+<project default="game_ant" name="game_ant">
+  <property value="${user.home}/.m2/repository" name="dir.m2repository"/>
+  <property value="." name="dir.buildfile"/>
+  <property value="../../" name="dir.server"/>
+  <property value="../../bin/jar" name="dir.jarfile"/>
+  <target name="client_jar">
+    <jar filesetmanifest="mergewithoutmain" destfile="${dir.jarfile}/client.jar">
+      <manifest>
+        <attribute value="com.home.client.app.GClientApp" name="Main-Class"/>
+        <attribute value="." name="Class-Path"/>
+      </manifest>
+      <fileset dir="${dir.server}/clientProject/client/target/classes"/>
+      <fileset dir="${dir.server}/project/base/target/classes"/>
+      <fileset dir="${dir.server}/clientProject/commonClient/target/classes"/>
+      <fileset dir="${dir.server}/project/center/target/classes"/>
+      <fileset dir="${dir.server}/project/commonBase/target/classes"/>
+      <fileset dir="${dir.server}/project/shine/target/classes"/>
+      <zipfileset src="${dir.m2repository}/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/log4j/log4j/1.2.17/log4j-1.2.17.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/io/netty/netty-all/4.1.32.Final/netty-all-4.1.32.Final.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/org/json/json/20170516/json-20170516.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/com/koloboke/koloboke-impl-common-jdk8/1.0.0/koloboke-impl-common-jdk8-1.0.0.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/com/koloboke/koloboke-api-jdk8/1.0.0/koloboke-api-jdk8-1.0.0.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/org/apache/commons/commons-dbcp2/2.5.0/commons-dbcp2-2.5.0.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" excludes="META-INF/*.SF"/>
+      <zipfileset src="${dir.m2repository}/org/apache/commons/commons-pool2/2.6.0/commons-pool2-2.6.0.jar" excludes="META-INF/*.SF"/>
+    </jar>
+  </target>
+</project>

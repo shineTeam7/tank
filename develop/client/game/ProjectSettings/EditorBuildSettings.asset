@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/source/unity/main.unity
+    guid: f50d04197314b483e987c588d137f7c4
+  - enabled: 1
+    path: Assets/source/unity/root.unity
+    guid: 34ccea845ce3cd942a89cdae5a1f68a7
+  - enabled: 1
+    path: Assets/source/scene/melee.unity
+    guid: 2bc7dbbdc08f44f12b455e81f5eccd7e
+  - enabled: 1
+    path: Assets/source/scene/test.unity
+    guid: 9bcb3f1b3b09a4b8ba07528db2be2ec7
+  m_configObjects: {}

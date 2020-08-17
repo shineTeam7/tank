@@ -1,0 +1,5 @@
+<setting>
+  <isOfficial value="0"/>
+  <operateLogPath value="../operateLog/act.log"/>
+  <platformID value="263"/>
+</setting>

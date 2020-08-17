@@ -1,0 +1,5 @@
+<setting>
+	<loginURL value="http://127.0.0.1:20014"/>
+	<cdnURL value="http://127.0.0.1/tank/"/>
+	<isOfficial value="0"/>
+</setting>

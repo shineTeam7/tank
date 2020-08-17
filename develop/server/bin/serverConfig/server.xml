@@ -1,0 +1,11 @@
+<serverConfig>
+  <manager clientHost="127.0.0.1" clientHttpPort="40014" serverPort="40011"/>
+  <center serverHost="127.0.0.1" serverPort="10011" serverHttpPort="10013" mysql="jdbc:mysql://127.0.0.1:3306/tank_center,root,"/>
+  <login id="1" serverHost="127.0.0.1" serverPort="20011" clientHost="127.0.0.1" clientHttpPort="20014" mysql="jdbc:mysql://127.0.0.1:3306/tank_center,root,"/>
+  <game id="1" serverHost="127.0.0.1" serverPort="30011" clientHost="127.0.0.1" clientPort="30012" mysql="jdbc:mysql://127.0.0.1:3306/tank_game,root," isNecessary="1"/>
+  <game id="2" serverHost="127.0.0.1" serverPort="30021" clientHost="127.0.0.1" clientPort="30022" mysql="jdbc:mysql://127.0.0.1:3306/tank_game,root," isNecessary="0"/>
+  <game id="3" serverHost="127.0.0.1" serverPort="30031" clientHost="127.0.0.1" clientPort="30032" mysql="jdbc:mysql://127.0.0.1:3306/tank_game,root," isAssist="1"/>
+  <scene id="1" serverHost="127.0.0.1" serverPort="50011" clientHost="127.0.0.1" clientPort="50012"/>
+  <scene id="2" serverHost="127.0.0.1" serverPort="50021" clientHost="127.0.0.1" clientPort="50022"/>
+  <scene id="3" serverHost="127.0.0.1" serverPort="50031" clientHost="127.0.0.1" clientPort="50032"/>
+</serverConfig>

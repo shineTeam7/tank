@@ -1,0 +1,23 @@
+<info>
+    <root path="src/game">
+        <hotfixPath path="data" needFactory="true"/>
+        <hotfixPath path="scene" needFactory="true"/>
+        <hotfixPath path="logic" needFactory="true"/>
+        <hotfixPath path="view" needFactory="true"/>
+
+        <hotfixPath path="config/game" needFactory="false"/>
+        <hotfixPath path="player" needFactory="false"/>
+        <hotfixPath path="net/base" needFactory="false"/>
+
+        <ignorePath path="adapters"/>
+        <ignorePath path="control/CILRuntimeControl.cs"/>
+        <ignorePath path="tool/generate"/>
+        <ignorePath path="tool/func"/>
+        <ignorePath path="view/animation"/>
+        <ignorePath path="view/uiGenerate"/>
+    </root>
+    <namespace name="ShineEngine"/>
+    <allowMethod cls="BaseConfig" methods="toReadBytesSimple,afterReadConfig,generateRefresh,clear"/>
+    <allowMethod cls="BaseRequest" methods="copyData,doWriteToStream,doWriteBytesSimple,toWriteBytesSimple,getDataClassName,toWriteDataString,clear"/>
+    <allowMethod cls="BaseResponse" methods="readFromStream,preExecute,execute,toReadBytesSimple,getDataClassName,toWriteDataString,clear"/>
+</info>

@@ -1,0 +1,7 @@
+<trigger>
+  <one id="1" name="guide_1.GuideEntryT" groupID="1" groupType="2"/>
+  <one id="2" name="scene_2.Scene_2_CheckT" groupID="2" groupType="1"/>
+  <one id="3" name="scene_2.Scene_2_EntryT" groupID="2" groupType="1"/>
+  <one id="4" name="scene_1.Test1T" groupID="1" groupType="1"/>
+  <one id="5" name="scene_1.Test2T" groupID="1" groupType="1"/>
+</trigger>

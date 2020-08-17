@@ -1,0 +1,5 @@
+
+
+truncate `global`;
+
+truncate `player`;

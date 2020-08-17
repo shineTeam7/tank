@@ -1,0 +1,3 @@
+<node>
+	<manager serverHost="127.0.0.1" serverPort="40011"/>
+</node>

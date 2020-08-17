@@ -1,0 +1,49 @@
+pipeline {
+    agent {
+        label 'master'
+    }
+
+    stages {
+        stage('local') {
+            steps {
+                echo 'update home'
+                sh script: '''cd $homeGitPath
+                            git config core.sshCommand "ssh -i $gitKeyPath"
+                            git pull
+                            '''
+                
+                echo 'update game'
+                sh script: '''cd $gameGitPath
+                            git config core.sshCommand "ssh -i $gitKeyPath"
+                            git pull
+                            '''
+                echo 'build server'
+                sh script: 'sh $gameGitPath/develop/server/toolsMac/buildServer.sh'
+                echo 'configExport'
+                sh script: 'sh $gameGitPath/develop/server/toolsMac/configExport.sh'
+            }
+        }
+      
+        stage('remote') {
+            steps {
+                echo 'stopServer'
+                
+                sh script: '''ssh -p $serverSSHPort -i $serverSSHKeyPath $serverSSHAddress "cd $serverBinPath;
+                cd run;
+                sh stopUntilOver.sh
+                "
+                '''
+            
+                echo 'update'
+                sh script: 'scp -P $serverSSHPort -i $serverSSHKeyPath $gameGitPath/develop/server/bin/jar/game.jar $serverSSHAddress:$serverBinPath/jar/game.jar'
+                sh script: 'scp -P $serverSSHPort -i $serverSSHKeyPath $gameGitPath/develop/server/bin/config/config.bin $serverSSHAddress:$serverBinPath/config/config.bin'
+                sh script: '''ssh -p $serverSSHPort -i $serverSSHKeyPath $serverSSHAddress "cd $serverBinPath;
+                cd run;
+                sh start.sh
+                "
+                '''
+            }
+        }
+        
+    }
+}
